@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <N98_CustomLayoutHandles>
+            <version>1.0.0</version>
+        </N98_CustomLayoutHandles>
+    </modules>
+    <global>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <n98_custom_handles>
+                        <class>N98_CustomLayoutHandles_Model_Observer</class>
+                        <method>addCustomHandles</method>
+                    </n98_custom_handles>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
+        <models>
+            <n98_customhandles>
+                <class>N98_CustomLayoutHandles_Model</class>
+            </n98_customhandles>
+        </models>
+    </global>
+</config>
