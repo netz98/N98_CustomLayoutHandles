@@ -1,5 +1,25 @@
 <?php
+/**
+ * netz98 magento module
+ *
+ * LICENSE
+ *
+ * This source file is subject of netz98.
+ * You may be not allowed to change the sources
+ * without authorization of netz98 new media GmbH.
+ *
+ * @copyright  Copyright (c) 1999-2012 netz98 new media GmbH (http://www.netz98.de)
+ * @author     netz98 new media GmbH <info@netz98.de>
+ * @category   N98
+ * @package    N98_CustomLayoutHandles
+ */
 
+/**
+ * Manages monitoring config across all magento modules
+ *
+ * @category N98
+ * @package  N98_CustomLayoutHandles
+ */
 class N98_CustomLayoutHandles_Model_Observer
 {
     /**
@@ -25,7 +45,6 @@ class N98_CustomLayoutHandles_Model_Observer
             default:
 
         }
-        Zend_Debug::dump($observer->getEvent()->getLayout()->getUpdate()->getHandles());
     }
 
     /**
