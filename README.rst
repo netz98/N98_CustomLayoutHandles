@@ -20,3 +20,14 @@ CMS Page
 --------
 
 - CMS_PAGE_<page-identifier>
+
+All Pages
+---------
+
+- WEBSITE_<code>_<full_action_name>
+
+i.e. WEBSITE_base_catalog_product_view
+
+- STORE_<code>_<full_action_name>
+
+i.e. STORE_default_catalog_product_view
