@@ -45,6 +45,8 @@ class N98_CustomLayoutHandles_Model_Observer
             default:
 
         }
+
+        $this->_addActionHandles($observer);
     }
 
     /**
@@ -102,5 +104,19 @@ class N98_CustomLayoutHandles_Model_Observer
             $update = $observer->getEvent()->getLayout()->getUpdate();
             $update->addHandle('CMS_PAGE_' . $page->getIdentifier());
         }
+    }
+
+    /**
+     * @param Varien_Event_Observer $observer
+     */
+    protected function _addActionHandles($observer)
+    {
+        $action = $observer->getEvent()->getAction(); /* @var $action Mage_Core_Controller_Varien_Action */
+        $fullActionName = $action->getFullActionName();
+        $storeCode = Mage::app()->getStore()->getCode();
+
+        /* @var $update Mage_Core_Model_Layout_Update */
+        $update = $observer->getEvent()->getLayout()->getUpdate();
+        $update->addHandle('STORE_' . $storeCode .  '_' . $fullActionName);
     }
 }
