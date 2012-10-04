@@ -113,10 +113,12 @@ class N98_CustomLayoutHandles_Model_Observer
     {
         $action = $observer->getEvent()->getAction(); /* @var $action Mage_Core_Controller_Varien_Action */
         $fullActionName = $action->getFullActionName();
+        $websiteCode = Mage::app()->getWebsite()->getCode();
         $storeCode = Mage::app()->getStore()->getCode();
 
         /* @var $update Mage_Core_Model_Layout_Update */
         $update = $observer->getEvent()->getLayout()->getUpdate();
+        $update->addHandle('WEBSITE_' . $websiteCode .  '_' . $fullActionName);
         $update->addHandle('STORE_' . $storeCode .  '_' . $fullActionName);
     }
 }
