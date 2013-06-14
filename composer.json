@@ -1,0 +1,16 @@
+{
+    "name": "n98/N98_CustomLayoutHandles",
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "description": "Adds some new handles to magento shop frontend which are better usable if you don't like to work with IDs.",
+    "homepage": "https://github.com/netz98/N98_CustomLayoutHandles",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":"netz98 new media GmbH",
+            "email":"magento@netz98.de"
+        }
+    ]
+}
