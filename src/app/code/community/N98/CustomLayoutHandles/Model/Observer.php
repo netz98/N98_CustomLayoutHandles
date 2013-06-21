@@ -95,8 +95,8 @@ class N98_CustomLayoutHandles_Model_Observer
     protected function _addCmsPageHandle($observer)
     {
         $pageId = Mage::app()->getRequest()->getParam('page_id');
-        $page = Mage::getSingleton('cms/page');
         if ($pageId) {
+            $page = Mage::getSingleton('cms/page');
             $page->setStoreId(Mage::app()->getStore()->getId());
             $page->load($pageId); /* @var $page Mage_Cms_Model_Page */
 
